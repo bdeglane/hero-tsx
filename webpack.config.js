@@ -77,10 +77,10 @@ module.exports = {
         return module.context && module.context.indexOf('node_modules') !== -1;
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: isProd,
-      sourceMap: isDev
-    }),
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compress: isProd,
+    //   sourceMap: isDev
+    // }),
     new ExtractTextPlugin({
       filename: '../style/[name].css',
       disable: false,

@@ -16,7 +16,7 @@
       }
     },
     "build:prod": {
-      "command": "node_modules\\.bin\\webpack",
+      "command": "node_modules\\.bin\\webpack -p",
       "env": {
         "NODE_ENV": "production"
       }
