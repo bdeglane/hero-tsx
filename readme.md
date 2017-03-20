@@ -1,1 +1,2 @@
-# Hero - React Typescript
+# Tour of Heroes - React Redux Typescript
+
