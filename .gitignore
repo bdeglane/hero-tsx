@@ -84,3 +84,5 @@ $RECYCLE.BIN/
 dist/
 src/static/js/
 src/static/css/
+src/static/style/
+nbproject/
