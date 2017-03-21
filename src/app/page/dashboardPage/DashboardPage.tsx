@@ -1,7 +1,9 @@
 import * as React from 'react';
 import {Link} from 'react-router';
 import Hero from "../../model/Hero";
-// import * as styles from './dashboardPage.css';
+// to prevent import typescript error
+// http://stackoverflow.com/a/35015146
+const styles = require('./dashboardPage.css');
 
 // @connect(mapStateToProps, mapDispatchToProps)
 export default class DashboardPage extends React.Component<any,any> {
@@ -13,9 +15,9 @@ export default class DashboardPage extends React.Component<any,any> {
         const heroes = this.props.heroes.map((hero: Hero, id: number) => {
             return (
                 <Link to={`/hero/${hero.id}`}
-                      className="col-1-4"
+                      className={styles.col_1_4}
                       key={id}>
-                    <span className="module hero">
+                    <span className={`${styles.module} ${styles.hero}`}>
                          <h4>{hero.name}</h4>
                          </span>
                 </Link>
@@ -25,7 +27,7 @@ export default class DashboardPage extends React.Component<any,any> {
         return (
             <div>
                 <h3>Top Heroes</h3>
-                <div className="grid grid-pad">
+                <div className={`${styles.grid} ${styles.grid_pad}`}>
                     {heroes}
                 </div>
             </div>
