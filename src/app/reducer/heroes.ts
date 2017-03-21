@@ -21,7 +21,7 @@ export const heroes = (state = defaultState(), action: any): any => {
         case GET_HEROES:
             break;
         case SET_HEROES:
-            state = [...state, ...action.payload.heroes];
+            state = [...action.payload.heroes];
             break;
         case GET_HERO:
             break;
