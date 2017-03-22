@@ -6,6 +6,8 @@ import {syncHistoryWithStore} from 'react-router-redux'
 import Route from './router/Route';
 import Store from "./core/Store";
 
+const styles = require('./style/main.css');
+
 export default class App extends React.Component<any,any> {
     private store: Store;
     private history: any;
