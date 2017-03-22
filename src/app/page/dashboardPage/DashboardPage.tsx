@@ -12,7 +12,10 @@ export default class DashboardPage extends React.Component<any,any> {
     }
 
     render() {
-        const heroes = this.props.heroes.map((hero: Hero, id: number) => {
+
+        // keep only 4 heroes for dashboard page
+        const bestHeroes = this.props.heroes.slice(1, 5);
+        const heroes = bestHeroes.map((hero: Hero, id: number) => {
             return (
                 <Link to={`/hero/${hero.id}`}
                       className={styles.col_1_4}
